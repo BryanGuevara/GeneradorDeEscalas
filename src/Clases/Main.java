@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
-import Clases.Nota;
 import Clases.Escala;
 
 public class Main {
@@ -12,9 +11,9 @@ public class Main {
     public static void main(String[] args) {
         Nota[] notas = {
             new Nota(1, "DO"),
-            new Nota(2, "Do#"),
+            new Nota(2, "Do# / REb"),
             new Nota(3, "RE"),
-            new Nota(4, "RE#"),
+            new Nota(4, "RE# / MIb"),
             new Nota(5, "MI"),
             new Nota(6, "FA"),
             new Nota(7, "FA#"),

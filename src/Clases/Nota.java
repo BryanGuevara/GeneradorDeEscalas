@@ -1,7 +1,5 @@
 package Clases;
 
-import java.util.List;
-
 public class Nota {
 
     private int numero;
