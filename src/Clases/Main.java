@@ -11,9 +11,9 @@ public class Main {
     public static void main(String[] args) {
         Nota[] notas = {
             new Nota(1, "DO"),
-            new Nota(2, "Do# / REb"),
+            new Nota(2, "DO#"),
             new Nota(3, "RE"),
-            new Nota(4, "RE# / MIb"),
+            new Nota(4, "RE#"),
             new Nota(5, "MI"),
             new Nota(6, "FA"),
             new Nota(7, "FA#"),
@@ -29,8 +29,9 @@ public class Main {
 
         Escala escalaMayor = new Escala(Arrays.asList(notas), progresion, "Mayor", 1);
 
+        System.out.println("=================================================== <[Entrada]> ==================================================");
         Scanner scanner = new Scanner(System.in);
-        System.out.println("¿De qué nota quieres la escala?");
+        System.out.print("¿De qué nota quieres la escala?: ");
         String notaInicial = scanner.nextLine();
 
         List<Nota> notasEscala = escalaMayor.getNotas();
@@ -39,10 +40,9 @@ public class Main {
         String[] escalaMayorGenerada = generarEscala(notasEscala, notaInicial, progresionEscala);
         List<String> acordesCirculoQuintas = generarAcordesCirculoQuintas(notasEscala, notaInicial, circuloQuintas);
 
-        System.out.println("--------------------------------------------------");
+        System.out.println("=================================================== <[Escala]> ===================================================");
 
         if (escalaMayorGenerada != null) {
-            System.out.println("La escala Mayor de " + notaInicial + " es:");
             for (String nota : escalaMayorGenerada) {
                 System.out.print(nota + " ");
             }
@@ -50,14 +50,13 @@ public class Main {
             System.out.println("La nota inicial no es válida para la escala mayor.");
         }
 
-        System.out.println("\n--------------------------------------------------");
+        System.out.println("\n=================================================== <[Circulo]> ===================================================");
 
         if (acordesCirculoQuintas != null) {
-            System.out.println("Los acordes del círculo de " + notaInicial + " son:");
             for (String acorde : acordesCirculoQuintas) {
                 System.out.print(acorde + " ");
             }
-            System.out.println("\n--------------------------------------------------");
+            System.out.println("\n==================================================================================================================");
             System.out.println("\n");
         } else {
             System.out.println("La nota inicial no es válida para los acordes del círculo de quintas.");
